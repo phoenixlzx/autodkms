@@ -1,0 +1,13 @@
+build ()
+{
+  echo "Building dkms modules for ${KERNELVERSION} kernel..."
+  dkms autoinstall -k ${KERNELVERSION}
+  echo "Build complete."
+}
+
+help ()
+{
+cat<<HELPEOF
+    This hook rebuilds all dkms modules for new kernel.
+HELPEOF
+} 
