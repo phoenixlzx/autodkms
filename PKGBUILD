@@ -9,6 +9,8 @@ arch=('any')
 license=('MIT')
 depends=('dkms')
 install=autodkms.install
+source=("https://raw.github.com/phoenixlzx/autodkms/master/autodkms")
+sha256sums=("f2256cc3ef2db4b284f73ce0ed2d2a591d82a4f2b9ee112da12cff8eb27f89a1")
 
 package() {
   cd "${srcdir}"
