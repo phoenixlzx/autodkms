@@ -1,8 +1,8 @@
 build ()
 {
   if [ ! -d "/usr/lib/modules/${KERNELVERSION}/build" ]; then
-    echo "You need to install or update ${KERNELVERSION} headers before build kernel image."
-    echo "If you already installed kernel header and you are doing system upgrade, don't forget to run mkinitcpio -p [your kernel preset]"
+    echo -e "\e[1m\e[33mYou need to install or update ${KERNELVERSION} headers before build kernel image.\e[0m"
+    echo -e "\e[1m\e[33mIf you already installed kernel headers and you are doing system upgrade, don't forget to run mkinitcpio -p [your kernel preset]\e[0m"
     exit 1
   fi
   echo "Building dkms modules for ${KERNELVERSION} kernel..."
